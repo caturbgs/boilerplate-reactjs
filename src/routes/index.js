@@ -11,33 +11,33 @@ const AppRoutes = () => {
 				{/* <Route */}
 				{/* 	path="/login" */}
 				{/* 	element={ */}
-				{/* 		<RequireAuth> */}
+				{/* 		<ProtectedRoute> */}
 				{/* 			<Login /> */}
-				{/* 		</RequireAuth> */}
+				{/* 		</ProtectedRoute> */}
 				{/* 	} */}
 				{/* /> */}
 				{/* <Route */}
 				{/* 	path="/register" */}
 				{/* 	element={ */}
-				{/* 		<RequireAuth> */}
+				{/* 		<ProtectedRoute> */}
 				{/* 			<Login /> */}
-				{/* 		</RequireAuth> */}
+				{/* 		</ProtectedRoute> */}
 				{/* 	} */}
 				{/* /> */}
 				{/* <Route */}
 				{/* 	path="/forgot-password" */}
 				{/* 	element={ */}
-				{/* 		<RequireAuth> */}
+				{/* 		<ProtectedRoute> */}
 				{/* 			<Login /> */}
-				{/* 		</RequireAuth> */}
+				{/* 		</ProtectedRoute> */}
 				{/* 	} */}
 				{/* /> */}
 				{/* <Route */}
 				{/* 	path="/reset-password" */}
 				{/* 	element={ */}
-				{/* 		<RequireAuth> */}
+				{/* 		<ProtectedRoute> */}
 				{/* 			<Login /> */}
-				{/* 		</RequireAuth> */}
+				{/* 		</ProtectedRoute> */}
 				{/* 	} */}
 				{/* /> */}
 
@@ -47,7 +47,7 @@ const AppRoutes = () => {
 	);
 };
 
-const RequireAuth = ({children}) => {
+const ProtectedRoute = ({children}) => {
 	const {authentication} = useStore();
 
 	return authentication.isLoggedIn ? children : <Navigate to="/login" />;
