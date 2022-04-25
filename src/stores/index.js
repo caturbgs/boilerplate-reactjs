@@ -1,8 +1,8 @@
-import Invoices from './invoices';
+import Authentication from './authentication';
 
 export class RootStore {
 	// constructor() {
 	// }
 
-	invoices = new Invoices(this);
+	authentication = new Authentication(this);
 }
