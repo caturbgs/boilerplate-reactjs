@@ -1,0 +1,8 @@
+/package-lock.json
+
+/public
+/.vscode
+/.idea
+/node_modules
+/target
+/src/assets

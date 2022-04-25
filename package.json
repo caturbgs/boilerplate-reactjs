@@ -3,23 +3,43 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@jest/globals": "^27.5.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
+    "antd": "^4.16.13",
+    "axios": "^0.26.1",
+    "date-fns": "^2.28.0",
+    "lodash": "^4.17.21",
     "mobx": "^6.5.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "devDependencies": {
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.3",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.3.5",
+    "prettier": "^2.5.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format:check": "prettier --check '**/*.{js,jsx}'",
+    "format:write": "prettier --write '**/*.{js,jsx}'",
+    "lint:check": "eslint '**/*.{js,jsx}'",
+    "lint:fix": "eslint --fix '**/*.{js,jsx}'"
   },
   "eslintConfig": {
-    "extends": [g
+    "extends": [
       "react-app",
       "react-app/jest"
     ]
@@ -34,6 +54,15 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --write '**/*.{js,jsx}'",
+      "eslint --fix '**/*.{js,jsx}'"
+    ],
+    "*.{html,css,less}": [
+      "prettier --write '**/*.{html,css,less}'"
     ]
   }
 }

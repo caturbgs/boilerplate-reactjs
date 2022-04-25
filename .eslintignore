@@ -1,0 +1,10 @@
+/public
+/.vscode
+/.idea
+/node_modules
+/target
+/src/assets
+/src/index.js
+/src/App.js
+/src/routes
+/src/stores
