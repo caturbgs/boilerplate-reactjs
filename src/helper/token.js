@@ -18,9 +18,13 @@ const getParsedToken = () => {
 	}
 };
 
-const clearToken = () => {
+const clearToken = (all = false) => {
 	if (typeof window !== 'undefined') {
-		localStorage.removeItem('token');
+		if (all) {
+			localStorage.clear();
+		} else {
+			localStorage.removeItem('token');
+		}
 	}
 };
 

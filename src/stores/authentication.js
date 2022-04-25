@@ -29,7 +29,7 @@ export default class Authentication {
 		const navigate = useNavigate();
 
 		this.isLoggedIn = false;
-		clearToken();
+		clearToken(true);
 		navigate('/login', {replace: true});
 	}
 }
