@@ -1,11 +1,15 @@
 import './App.css';
 import {StoreProvider} from './helper/useStore';
 import AppRoutes from './routes';
+import {Provider} from 'react-redux';
+import store from './app/store';
 
 const App = () => {
 	return (
 		<StoreProvider>
-			<AppRoutes />
+			<Provider store={store}>
+				<AppRoutes />
+			</Provider>
 		</StoreProvider>
 	);
 };

@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@jest/globals": "^27.5.1",
+    "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
@@ -14,6 +15,7 @@
     "mobx": "^6.5.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-redux": "^8.0.1",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
@@ -37,10 +39,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "format:check": "prettier --check '**/*.{js,jsx}'",
-    "format:write": "prettier --write '**/*.{js,jsx}'",
-    "lint:check": "eslint '**/*.{js,jsx}'",
-    "lint:fix": "eslint --fix '**/*.{js,jsx}'"
+    "format:check": "prettier --check \"**/*.{js,jsx}\"",
+    "format:write": "prettier --write \"**/*.{js,jsx}\"",
+    "lint:check": "eslint \"**/*.{js,jsx}\"",
+    "lint:fix": "eslint --fix \"**/*.{js,jsx}\""
   },
   "eslintConfig": {
     "extends": [

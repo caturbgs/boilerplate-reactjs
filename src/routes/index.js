@@ -1,12 +1,14 @@
 import {BrowserRouter, Navigate, Route, Routes} from 'react-router-dom';
 import Home from '../pages/Home';
 import {useStore} from '../helper/useStore';
+import ExampleRedux from '../pages/ExampleRedux';
 
 const AppRoutes = () => {
 	return (
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<Home />} />
+				<Route path="/example-redux" element={<ExampleRedux />} />
 
 				{/* <Route */}
 				{/* 	path="/login" */}
